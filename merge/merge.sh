@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OUT = "../merged.txt"
+OUT="../merged.txt"
 echo "" > $OUT
 
 for i in *.txt;
