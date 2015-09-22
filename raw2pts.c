@@ -19,6 +19,8 @@ int main ( int argc, char **argv )
     FILE *ifp = fopen( argv[1], "rb" );
     FILE *ofp = fopen( argv[2], "w" );
     raw2pts( ifp, ofp );
+    fclose( ifp );
+    fclose( ofp );
 
     return 0;
 }
