@@ -5,4 +5,5 @@ do
     o=${i%.*}.txt
     echo "$i => $o"
     ../raw2pts $i $o
+    rm $i
 done
