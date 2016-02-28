@@ -3,6 +3,7 @@
 
 #define RAW_TYPE float
 #define RAW_SPAN 3
+#define PRINTF_STR "%20.10f "
 
 void raw2pts( FILE *ifp, FILE *ofp );
 
@@ -38,8 +39,10 @@ void raw2pts( FILE *ifp, FILE *ofp )
     int i = 0;
     for ( i = 0; i < len; ++i ) {
         fread( buf, sizeof( RAW_TYPE ), RAW_SPAN, ifp );
-        fprintf( ofp, "%20.10f %20.10f %20.10f\n",
-                 buf[0], buf[1], buf[2] );
+        for ( int j = 0; j < RAW_SPAN; ++j ) {
+            fprintf( ofp, PRINTF_STR, buf[j] );
+        }
+        fprintf( ofp, "\n" );
     }
     
     fprintf( stdout, "--Parsed %d points.\n", len ); 
