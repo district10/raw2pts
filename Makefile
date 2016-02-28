@@ -1,6 +1,6 @@
 input   = input
 output  = output
-pts	    = $(patsubst $(input)/%.raw, $(output)/%.txt, $(wildcard $(input)/*.raw))
+pts     = $(patsubst $(input)/%.raw, $(output)/%.txt, $(wildcard $(input)/*.raw))
 allpts  = $(output)/all.txt
 
 all: raw2pts $(pts) $(allpts)
