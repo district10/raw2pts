@@ -32,4 +32,6 @@ raw2pts.exe: <http://gnat.qiniudn.com/raw2pts/raw2pts.exe>
 
 把 `txt` 文件放到 merge 文件夹，双击 `merge.sh`，可以合并点云。
 
+或者把 `raw` 文件放到 input 文件夹啊，双击 `make.sh`，可以转化并合并（all.txt）。
+
 （Windows 系统上需要安装 git bash。）
