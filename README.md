@@ -1,22 +1,34 @@
 # raw2pts
-Raw file 2 point cloud file
+
+Raw file 2 point cloud file，用于转化 C2 激光点云相机源数据为点云文件。
 
 GitHub: <https://github.com/district10/raw2pts>
 
 ## Compile
 
-``` shell
-$ gcc raw2pts.c -o raw2pts
-```
+just `make`
 
-## Run
+## Usage
 
-``` shell
+Sample data
+
+  * demo.raw: <http://gnat.qiniudn.com/raw2pts/demo.raw>
+  * demo.txt: <http://gnat.qiniudn.com/raw2pts/demo.txt>
+
+manual:
+
+```shell
 $ raw2pts demo.raw demo.txt
 ```
 
-* demo.raw: <http://gnat.qiniudn.com/raw2pts/demo.raw>
-* demo.txt: <http://gnat.qiniudn.com/raw2pts/demo.txt>
+automated:
+
+把 C2 相机源数据放到 input 文件夹，然后双击 `make.sh`，
+相应点云文件回自动输出到 `output` 文件夹。
+
+## 效果
+
+用 CloudCompare 打开点云文件：
 
 ![](http://gnat.qiniudn.com/raw2pts/demo.png)
 
@@ -24,14 +36,6 @@ $ raw2pts demo.raw demo.txt
 
 raw2pts.exe: <http://gnat.qiniudn.com/raw2pts/raw2pts.exe>
 
-## Utils
+## License
 
-把 `raw2pts.exe` 放到根目录。
-
-把 `raw` 文件放到 batch 文件夹，双击 `batch.sh`，可以批量转化。
-
-把 `txt` 文件放到 merge 文件夹，双击 `merge.sh`，可以合并点云。
-
-或者把 `raw` 文件放到 input 文件夹啊，双击 `make.sh`，可以转化并合并（all.txt）。
-
-（Windows 系统上需要安装 git bash。）
+MIT
