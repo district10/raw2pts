@@ -38,4 +38,4 @@ raw2pts.exe: <http://gnat.qiniudn.com/raw2pts/raw2pts.exe>
 
 ## License
 
-MIT
+GPL
